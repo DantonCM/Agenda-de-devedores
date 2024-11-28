@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar se a preparação da instrução foi bem-sucedida
     if ($stmt) {
         // Associar parâmetros e executar a instrução
-        $stmt->bind_param("sssss", $nome, $telefone, $endereco, $valor);
+        $stmt->bind_param("ssss", $nome, $telefone, $endereco, $valor);
 
         if ($stmt->execute()) {
              // Redireciona para a página inicial com uma mensagem de sucesso

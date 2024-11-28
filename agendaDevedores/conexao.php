@@ -1,7 +1,7 @@
 <?php
 // Configurações de conexão
 $host = 'localhost';     // Nome do host (normalmente 'localhost')
-$dbname = 'agenda';      // Nome do banco de dados
+$dbname = 'agenda_devedores';      // Nome do banco de dados
 $username = 'root'; // Usuário do banco de dados
 $password = '';   // Senha do banco de dados
 

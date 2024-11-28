@@ -6,11 +6,10 @@
     <title>Agenda - Formulário</title>
     <link rel="stylesheet" href="css/cadastrar.css">
 </head>
-</head>
 <body>
 
 <div class="form-container">
-<a href="index.php" class="button return">Voltar</a>
+    <a href="index.php" class="button return">Voltar</a>
     <h1>Agenda</h1>
     <form action="adicionarCtt.php" method="POST">
         <label for="nome">Nome:</label>

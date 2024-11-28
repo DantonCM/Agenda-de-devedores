@@ -1,3 +1,39 @@
 PROJETO AGENDA DE DEVEDORES
 
-O projeto consiste na criação de uma agenda de devedores, formulada utilizando PHP e JavaScript, assim como CSS e HTML para a estruturação do site, onde o usuário pode adicionar um novo devedor, assim como consultar os devedores já listados, que ficam armazenados em um banco de dados, podendo realizar ações de alterar status do pagamento, assim como excluir algum dos devedores.
+O projeto consiste na criação de uma agenda de devedores, formulada utilizando PHP e JavaScript, assim como CSS e HTML para a estruturação do site, onde o usuário pode adicionar um novo devedor, assim como consultar os devedores já listados, que ficam armazenados em um banco de dados criado usando o MySQL, podendo realizar ações de alterar status do pagamento, assim como excluir algum dos devedores.
+
+COMPONENTES DO PROJETO
+
+1. PHP
+  1.1 INDEX.PHP
+    - Código referente à tela inicial da agenda, composta pelo título do projeto "Agenda de Devedores", e dois botões "Adicionar Contato" e "Listar Contatos"
+  1.2 CONEXAO.PHP
+    - Código responsável pela ligação entre o software e seu banco de dados, onde ficam armazenados os devedores. Conta com uma verificação de conexão que, por sua vez, emite uma mensagem de "Falha na conexão" caso não funcione.
+  1.3 CADASTRAR.PHP
+    - Código responsável pelo formulário de cadastro de novos devedores, contando com as colunas "Nome", "Telefone", "Endereço" e "Valor a pagar", e um botão "Adicionar" que insere os dados do devedor no banco.
+  1.4 ADICIONARCTT.PHP
+    - Código responsável pela inserção dos dados do devedor no banco de dados, após recebê-los através do formulário. Conta com uma verificação de sucesso, que redireciona o usuário para a página inicial caso o cadastro tenha sido bem-sucedido, e emite a mensagem "Erro ao adicionar contato" caso falhe.
+  1.5 LISTAR.PHP
+    - Código responsável pela lista de contatos de devedores presentes no banco, acessada através da página inicial ao pressionar o botão "Listar Contatos".
+  1.6 EXCLUIRCTT.PHP
+    - Código responsável pela exclusão de um devedor da lista de devedores. Essa função é acionada ao pressionar o botão "Excluir" na interface "Listar Contatos", que ao ser pressionado emite uma mensagem de confirmação "Tem certeza que deseja excluir este contato?". Ao confirmar, emite a mensagem "Contato excluído com sucesso!".
+  1.7 ALTERARCTT.PHP
+    - Código responsável pela alteração de status de pagamento de um devedor. Esse status é automaticamente definido como "NÃO" ao cadastrar alguém na lista, e pode ser alterado ao pressionar o botão "PAGO" na interface "Listar Contatos", que ao ser pressionado emite uma mensagem de confirmação "Tem certeza que este contato pagou a divida?". Ao confirmar, emite a mensagem "Situacao alterada com sucesso!".
+
+2. CSS
+  2.1 INDEX.CSS
+    - Código responsável pela estilização da página principal "Index" do projeto.
+  2.2 CADASTRAR.CSS
+    - Código responsável pela estilização da interface de cadastro do projeto.
+  2.3 LISTAR.CSS
+    - Código responsável pela estilização da interface de lista de contatos do projeto.
+
+3. JAVASCRIPT
+  3.1 SCRIPT.JS
+    - Script responsável por implementar uma máscara de entrada dinâmica para o campo de telefone. Aplica uma formatação automátca no valor inserido, garantindo que o formato fique de acordo com os padrões brasileiros.
+
+4. MySQL
+  3.1 BANCO DE DADOS
+    - Banco nomeado "agenda_devedores", responsável por envolver a tabela que armazena os dados dos devedores.
+    3.1.1 TABELA
+      - Tabela nomeada "contato", que armazena nome, endereço, telefone, valor da dívida, situação da dívida e um id gerado automaticamente para cada usuário cadastrado.

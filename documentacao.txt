@@ -33,7 +33,7 @@ COMPONENTES DO PROJETO
     - Script responsável por implementar uma máscara de entrada dinâmica para o campo de telefone. Aplica uma formatação automátca no valor inserido, garantindo que o formato fique de acordo com os padrões brasileiros.
 
 4. MySQL
-  3.1 BANCO DE DADOS
+  4.1 BANCO DE DADOS
     - Banco nomeado "agenda_devedores", responsável por envolver a tabela que armazena os dados dos devedores.
-    3.1.1 TABELA
+    4.1.1 TABELA
       - Tabela nomeada "contato", que armazena nome, endereço, telefone, valor da dívida, situação da dívida e um id gerado automaticamente para cada usuário cadastrado.

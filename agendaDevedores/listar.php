@@ -39,11 +39,11 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>
-                        <td>{$row['nome']}</td>
-                        <td>{$row['telefone']}</td>
-                        <td>{$row['endereco']}</td>
-                        <td>" . number_format($row['valor'], 2, ',', '.') . "</td>
-                        <td>{$row['situacao']}</td> 
+                        <td>{$row['Nome']}</td>
+                        <td>{$row['Telefone']}</td>
+                        <td>{$row['Endereco']}</td>
+                        <td>" . number_format($row['Valor'], 2, ',', '.') . "</td>
+                        <td>{$row['Situacao']}</td> 
                                              
                         <td>
                             <a  href='alterarCtt.php?id={$row['id']}' onclick=\"return confirm('Tem certeza que este contato pagou a divida?');\">Pago?</a><br> <br>
